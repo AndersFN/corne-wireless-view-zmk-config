@@ -35,10 +35,10 @@
 
             label = "Base";
             bindings = <
-&none  &kp Q                &kp W            &kp E            &kp R              &kp T      &kp Y      &kp U               &kp I             &kp O             &kp P                         &kp BSPC
-&none  &rpi LEFT_CONTROL A  &rpi LEFT_ALT S  &rpi LEFT_GUI D  &rpi LEFT_SHIFT F  &kp G      &kp H      &rpi RIGHT_SHIFT J  &rpi RIGHT_GUI K  &rpi RIGHT_ALT L  &rpi RIGHT_CONTROL SEMICOLON  &kp SQT
-&none  &kp Z                &kp X            &kp C            &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &none
-                                             &mo 3            &lt 1 SPACE        &kp TAB    &lt 1 RET  &lt 2 ESCAPE        &kp BACKSPACE
+&none  &kp Q                &kp W            &kp E            &kp R              &kp T          &kp Y         &kp U               &kp I             &kp O             &kp P                         &kp BSPC
+&none  &rpi LEFT_CONTROL A  &rpi LEFT_ALT S  &rpi LEFT_GUI D  &rpi LEFT_SHIFT F  &kp G          &kp H         &rpi RIGHT_SHIFT J  &rpi RIGHT_GUI K  &rpi RIGHT_ALT L  &rpi RIGHT_CONTROL SEMICOLON  &kp SQT
+&none  &kp Z                &kp X            &kp C            &kp V              &kp B          &kp N         &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &none
+                                             &mo 3            &lt 2 TAB          &lt 1 SPACE    &lt 1 ESCAPE  &lt 2 RET           &kp BACKSPACE
             >;
         };
 
