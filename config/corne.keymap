@@ -18,7 +18,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <80>;
             flavor = "tap-preferred";
         };
     };
@@ -35,10 +35,10 @@
 
             label = "Base";
             bindings = <
-&none  &kp Q                &kp W            &kp E            &kp R              &kp T        &kp Y         &kp U               &kp I             &kp O             &kp P                         &none
-&none  &rpi LEFT_CONTROL A  &rpi LEFT_ALT S  &rpi LEFT_GUI D  &rpi LEFT_SHIFT F  &kp G        &kp H         &rpi RIGHT_SHIFT J  &rpi RIGHT_GUI K  &rpi RIGHT_ALT L  &rpi RIGHT_CONTROL SEMICOLON  &kp SQT
-&none  &kp Z                &kp X            &kp C            &kp V              &kp B        &kp N         &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &none
-                                             &mo 3            &lt 2 SPACE        &lt 1 TAB    &lt 1 ESCAPE  &lt 2 RET           &kp BACKSPACE
+&kp TAB         &kp Q                &kp W            &kp E            &kp R              &kp T        &kp Y         &kp U               &kp I             &kp O             &kp P                         &kp BACKSPACE
+&none           &rpi LEFT_CONTROL A  &rpi LEFT_ALT S  &rpi LEFT_GUI D  &rpi LEFT_SHIFT F  &kp G        &kp H         &rpi RIGHT_SHIFT J  &rpi RIGHT_GUI K  &rpi RIGHT_ALT L  &rpi RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z                &kp X            &kp C            &kp V              &kp B        &kp N         &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &kp RIGHT_SHIFT
+                                                      &mo 3            &lt 2 SPACE        &lt 1 TAB    &lt 1 ESCAPE  &lt 2 RET           &kp BACKSPACE
             >;
         };
 
@@ -51,7 +51,7 @@
 
             label = "Lower";
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE    &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE    &trans    &trans         &trans       &trans     &trans  &kp DEL
 &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
 &trans  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
                               &trans        &kp N0        &trans       &trans    &trans         &kp DEL
