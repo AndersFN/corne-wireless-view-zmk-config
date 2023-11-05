@@ -92,6 +92,8 @@
 &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &trans             &trans            &trans      &trans  &trans        &trans
                         &trans   &trans   &trans     &trans             &trans            &trans
             >;
+
+            label = "func";
         };
 
         movement_layer {
