@@ -38,46 +38,58 @@
         my_copy: my_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp C>;
-            label = "MY_COPY";
-            wait-ms = <30>;
-            tap-ms = <40>;
+            bindings
+            = <&macro_press &kp LEFT_GUI>
+            ,s <&macro_tap &kp C>
+            , <&macro_release &kp LEFT_GUI>
+            ;
         };
         my_paste: my_paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp V>;
-            label = "MY_PASTE";
-            wait-ms = <30>;
-            tap-ms = <40>;
+            bindings
+            = <&macro_press &kp LEFT_GUI>
+            , <&macro_tap &kp V>
+            , <&macro_release &kp LEFT_GUI>
+            ;
         };
         high_right: high_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>;
-
+            bindings
+            = <&macro_press &kp LEFT_ALT &kp LEFT_SHIFT>
+            , <&macro_tap &kp RIGHT>
+            , <&macro_release &kp LEFT_ALT &kp LEFT_SHIFT>
+            ;
             label = "HIGH_RIGHT";
         };
         high_left: high_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-            = <&macro_press &kp LEFT_ALT>
-            , <&macro_tap &kp RIGHT>
-            , <&macro_release &kp LEFT_ALT>
+            = <&macro_press &kp LEFT_ALT &kp LEFT_SHIFT>
+            , <&macro_tap &kp LEFT>
+            , <&macro_release &kp LEFT_ALT &kp LEFT_SHIFT>
             ;
             label = "HIGH_LEFT";
         };
         high_line_right: high_line_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT>;
+            bindings
+            = <&macro_press &kp LEFT_GUI &kp LEFT_SHIFT>
+            , <&macro_tap &kp RIGHT>
+            , <&macro_release &kp LEFT_GUI &kp LEFT_SHIFT>
+            ;
             label = "HIGH_LINE_RIGHT";
         };
         high_line_left: high_line_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT>;
+            = <&macro_press &kp LEFT_GUI &kp LEFT_SHIFT>
+            , <&macro_tap &kp LEFT>
+            , <&macro_release &kp LEFT_GUI &kp LEFT_SHIFT>
+            ;
             label = "HIGH_LINE_LEFT";
         };
     };
