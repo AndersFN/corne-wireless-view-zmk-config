@@ -34,6 +34,45 @@
         };
     };
 
+    macros {
+        my_copy: my_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp C>;
+            label = "MY_COPY";
+        };
+        my_paste: my_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp V>;
+            label = "MY_PASTE";
+        };
+        high_right: high_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>;
+            label = "HIGH_RIGHT";
+        };
+        high_left: high_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT>;
+            label = "HIGH_LEFT";
+        };
+        high_line_right: high_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT>;
+            label = "HIGH_LINE_RIGHT";
+        };
+        high_line_left: high_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT>;
+            label = "HIGH_LINE_LEFT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,10 +137,10 @@
 
         movement_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans      &trans     &trans  &kp DEL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp PG_DN  &kp PG_UP   &kp HOME   &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans     &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &trans      &trans       &trans            &trans         &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT         &kp DOWN    &kp UP       &kp RIGHT         &kp END        &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans    &high_line_left  &high_left  &high_right  &high_line_right  &kp PAGE_DOWN  &kp PAGE_UP
+                        &trans  &trans  &trans    &trans           &trans      &trans
             >;
 
             label = "move";
@@ -109,10 +148,10 @@
 
         s_symbol_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &kp LBKT              &kp RBKT               &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp C_AC_COPY   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp C_AC_PASTE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans          &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp LBKT              &kp RBKT               &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &my_copy   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &my_paste  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans     &trans                &trans
             >;
 
             label = "[({";
