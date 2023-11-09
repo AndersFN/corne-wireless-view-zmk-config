@@ -38,37 +38,47 @@
         my_copy: my_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp C>;
+            bindings = <&kp LEFT_GUI &kp C>, <&macro_press>;
+
             label = "MY_COPY";
         };
         my_paste: my_paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp V>;
+            bindings = <&kp LEFT_GUI &kp V>, <&macro_press>;
+
             label = "MY_PASTE";
         };
         high_right: high_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>;
+            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>, <&macro_press>;
+
             label = "HIGH_RIGHT";
         };
         high_left: high_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT>;
+            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT>, <&macro_press>;
+
             label = "HIGH_LEFT";
         };
         high_line_right: high_line_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT>;
+            bindings =
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT>,
+                <&macro_press>;
+
             label = "HIGH_LINE_RIGHT";
         };
         high_line_left: high_line_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT>;
+            bindings =
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT>,
+                <&macro_press>;
+
             label = "HIGH_LINE_LEFT";
         };
     };
