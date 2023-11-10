@@ -54,18 +54,21 @@
         high_right: high_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp LEFT_SHIFT &kp RIGHT>;
 
             label = "HIGH_RIGHT";
         };
         high_left: high_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-            = <&macro_press &kp LEFT_ALT>
-            , <&macro_tap &kp RIGHT>
-            , <&macro_release &kp LEFT_ALT>
-            ;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>;
+
             label = "HIGH_LEFT";
         };
         high_line_right: high_line_right {
