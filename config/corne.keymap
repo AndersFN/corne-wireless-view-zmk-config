@@ -231,10 +231,10 @@
 
             label = "Base";
             bindings = <
-&mo 3                   &kp Q  &kp W  &kp E         &kp R      &kp T          &kp Y         &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
-&mt LEFT_CONTROL GRAVE  &kp A  &kp S  &kp D         &kp F      &kp G          &kp H         &kp J        &kp K         &kp L       &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT          &kp Z  &kp X  &kp C         &kp V      &kp B          &kp N         &kp M        &kp COMMA     &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
-                                      &kp LEFT_ALT  &lt 5 TAB  &lt 4 SPACE    &lt 1 ESCAPE  &lt 2 ENTER  &kp LEFT_GUI
+&mo 3                   &kp Q  &kp W  &kp E         &kp R             &kp T          &kp Y         &kp U        &kp I                   &kp O       &kp P          &kp BACKSPACE
+&mt LEFT_CONTROL GRAVE  &kp A  &kp S  &kp D         &kp F             &kp G          &kp H         &kp J        &kp K                   &kp L       &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT          &kp Z  &kp X  &kp C         &kp V             &kp B          &kp N         &kp M        &kp COMMA               &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+                                      &kp LEFT_ALT  &mt LEFT_GUI TAB  &lt 4 SPACE    &lt 1 ESCAPE  &lt 2 ENTER  &mt LEFT_GUI BACKSPACE
             >;
         };
 
@@ -247,10 +247,10 @@
 
             label = "num";
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp UNDER    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N7        &kp N8        &kp N9        &none        &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans        &kp N0        &trans       &trans  &trans  &trans
+&trans  &trans    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans        &kp N0        &trans       &trans  &trans  &trans
             >;
         };
 
@@ -261,12 +261,12 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            label = "!@#";
+            label = "sym";
             bindings = <
-&trans  &kp PIPE       &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp PLUS            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BACKSLASH  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp EQUAL           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp TILDE      &kp AMPERSAND    &kp ASTERISK  &kp LPAR   &kp LEFT_BRACKET    &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans        &trans     &trans              &trans  &trans  &trans
+&trans  &kp PIPE       &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp LEFT_BRACE          &kp RIGHT_BRACE        &trans  &trans  &trans  &trans  &trans
+&trans  &kp BACKSLASH  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TILDE      &kp AMPERSAND    &kp ASTERISK  &kp UNDER  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans     &trans                  &trans                 &trans  &trans
             >;
         };
 
@@ -283,24 +283,13 @@
 
         movement_layer {
             bindings = <
-&trans  &trans  &trans  &change_screen  &trans      &trans    &ff_line_left    &ff_left    &ff_right    &ff_line_right    &trans         &kp DELETE
-&trans  &trans  &trans  &left_tab       &right_tab  &trans    &kp LEFT         &kp DOWN    &kp UP       &kp RIGHT         &kp END        &kp HOME
-&trans  &trans  &trans  &my_copy        &my_paste   &trans    &high_line_left  &high_left  &high_right  &high_line_right  &kp PAGE_DOWN  &kp PAGE_UP
-                        &trans          &trans      &trans    &trans           &trans      &trans
+&trans  &trans  &trans  &change_screen  &trans      &trans    &ff_line_left    &ff_left    &ff_right            &ff_line_right    &trans         &kp DELETE
+&trans  &trans  &trans  &left_tab       &right_tab  &trans    &kp LEFT         &kp DOWN    &kp UP               &kp RIGHT         &kp END        &kp HOME
+&trans  &trans  &trans  &trans          &trans      &trans    &high_line_left  &high_left  &high_right          &high_line_right  &kp PAGE_DOWN  &kp PAGE_UP
+                        &trans          &trans      &trans    &trans           &trans      &mt LEFT_GUI DELETE
             >;
 
             label = "move";
-        };
-
-        s_symbol_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBKT              &kp RBKT               &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans                &trans
-            >;
-
-            label = "[({";
         };
     };
 };
