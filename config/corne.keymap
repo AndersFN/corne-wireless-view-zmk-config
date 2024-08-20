@@ -245,10 +245,10 @@
 
             label = "base";
             bindings = <
-&kp TAB                          &kp Q  &kp W  &kp E         &kp R             &kp T          &kp Y         &kp U        &kp I      &kp O       &kp P          &kp BACKSPACE
-&mt LEFT_CONTROL GRAVE           &kp A  &kp S  &kp D         &kp F             &kp G          &kp H         &kp J        &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&mt LEFT_SHIFT LEFT_PARENTHESIS  &kp Z  &kp X  &kp C         &kp V             &kp B          &kp N         &kp M        &kp COMMA  &kp PERIOD  &kp SLASH      &mt RIGHT_SHIFT RIGHT_PARENTHESIS
-                                               &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 5 SPACE    &lt 1 ESCAPE  &lt 2 ENTER  &mo 4
+&kp TAB                          &kp Q  &kp W  &kp E         &kp R             &kp T          &kp Y            &kp U        &kp I         &kp O       &kp P          &kp LEFT_BRACKET
+&mt LEFT_CONTROL GRAVE           &kp A  &kp S  &kp D         &kp F             &kp G          &kp H            &kp J        &kp K         &kp L       &kp SEMICOLON  &kp SQT
+&mt LEFT_SHIFT LEFT_PARENTHESIS  &kp Z  &kp X  &kp C         &kp V             &kp B          &kp N            &kp M        &kp COMMA     &kp PERIOD  &kp SLASH      &mt RIGHT_SHIFT RIGHT_PARENTHESIS
+                                               &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 5 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &lt 4 ESCAPE
             >;
         };
 
@@ -262,7 +262,7 @@
             label = "num";
             bindings = <
 &trans  &none     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans  &trans  &none   &trans  &trans  &trans
-&trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &none   &aa     &none   &trans  &trans
+&trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &none   &none   &none   &trans  &trans
 &trans  &none     &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans        &kp N0        &trans       &trans  &trans  &trans
             >;
@@ -309,9 +309,9 @@
         movement_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &ff_line_left    &ff_left    &ff_right    &ff_line_right    &kp END        &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT         &kp DOWN    &kp UP       &kp RIGHT         &kp DEL        &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT         &kp DOWN    &kp UP       &kp RIGHT         &none          &none
 &trans  &trans  &trans  &trans  &trans  &trans    &high_line_left  &high_left  &high_right  &high_line_right  &kp PAGE_DOWN  &kp PAGE_UP
-                        &trans  &trans  &trans    &trans           &trans      &trans
+                        &trans  &trans  &trans    &kp DEL          &trans      &trans
             >;
 
             label = "move";
