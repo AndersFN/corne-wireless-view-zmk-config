@@ -73,7 +73,7 @@
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LCTRL>;
 
             label = "FF_RIGHT";
         };
@@ -83,11 +83,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_CONTROL>,
                 <&macro_tap>,
                 <&kp LEFT>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LCTRL>;
 
             label = "FF_LEFT";
         };
@@ -104,6 +104,46 @@
                 <&kp LEFT_ALT>;
 
             label = "AA";
+        };
+
+        test: test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_press>,
+                <&kp KP_NUMBER_2>,
+                <&macro_press>,
+                <&kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "test";
+        };
+
+        test2: test2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp N0>,
+                <&macro_tap>,
+                <&kp NUMBER_2>,
+                <&macro_press>,
+                <&kp NUMBER_2>,
+                <&macro_press>,
+                <&kp N9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "test2";
         };
     };
 
@@ -137,7 +177,7 @@
             bindings = <
 &trans  &none     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &none     &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &none     &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &test           &test2          &trans           &trans  &trans
                                 &trans        &trans        &kp N0       &trans  &trans          &trans
             >;
         };
