@@ -41,11 +41,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
                 <&kp LEFT>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>;
+                <&kp LCTRL &kp LEFT_SHIFT>;
 
             label = "HIGH_LEFT";
         };
@@ -55,41 +55,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>;
+                <&kp LCTRL &kp LEFT_SHIFT>;
 
             label = "HIGH_RIGHT";
-        };
-
-        high_line_right: high_line_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp LEFT_SHIFT>;
-
-            label = "HIGH_LINE_RIGHT";
-        };
-
-        high_line_left: high_line_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp LEFT_SHIFT>;
-
-            label = "HIGH_LINE_LEFT";
         };
 
         ff_right: ff_right {
@@ -97,11 +69,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&kp RCTRL>;
 
             label = "FF_RIGHT";
         };
@@ -111,121 +83,23 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT>,
+                <&kp RCTRL>,
                 <&macro_tap>,
                 <&kp LEFT>,
                 <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&kp RCTRL>;
 
             label = "FF_LEFT";
         };
 
-        ff_line_left: ff_line_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-
-            label = "FF_LINE_LEFT";
-        };
-
-        ff_line_right: ff_line_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-
-            label = "FF_LINE_RIGHT";
-        };
-
-        my_copy: my_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-
-            label = "MY_COPY";
-        };
-
-        my_paste: my_paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-
-            label = "MY_PASTE";
-        };
-
-        left_tab: left_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_GUI>;
-
-            label = "LEFT_TAB";
-        };
-
-        right_tab: right_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_GUI>;
-
-            label = "RIGHT_TAB";
-        };
-
-        change_screen: change_screen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI>;
-
-            label = "CHANGE_SCREEN";
-        };
-
-        aa: aa {
+        altf4: aa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_N2 &kp KP_NUMBER_2 &kp KP_NUMBER_9>,
+                <&kp F4>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
@@ -261,10 +135,10 @@
 
             label = "num";
             bindings = <
-&trans  &none     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans  &trans  &none   &trans  &trans  &trans
-&trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &none   &none   &none   &trans  &trans
-&trans  &none     &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans        &kp N0        &trans       &trans  &trans  &trans
+&trans  &none     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &kp PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &none     &kp N7        &kp N8        &kp N9        &kp UNDER    &trans  &trans          &trans          &trans           &trans  &trans
+                                &trans        &trans        &kp N0       &trans  &trans          &trans
             >;
         };
 
@@ -277,10 +151,10 @@
 
             label = "sym1";
             bindings = <
-&trans  &kp PIPE          &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp NON_US_BACKSLASH    &trans  &none     &kp UP_ARROW    &trans     &trans  &trans
-&trans  &kp LEFT_BRACKET  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp RIGHT_BRACKET       &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-&trans  &kp LEFT_BRACE    &kp AMPERSAND    &kp ASTERISK  &none      &kp RIGHT_BRACE         &trans  &none     &none           &trans     &trans  &trans
-                                           &trans        &trans     &trans                  &trans  &trans    &trans
+&trans  &kp PIPE          &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp NON_US_BACKSLASH    &trans  &none   &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACKET  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp RIGHT_BRACKET       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACE    &kp AMPERSAND    &kp ASTERISK  &none      &kp RIGHT_BRACE         &trans  &none   &none   &trans  &trans  &trans
+                                           &trans        &trans     &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -297,10 +171,10 @@
 
         function_layer {
             bindings = <
-&trans  &trans  &kp F1  &kp F2     &kp F3          &kp F4        &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT  &trans  &bt BT_CLR    &bt BT_SEL 0
-&trans  &trans  &kp F5  &kp F6     &kp F7          &kp F8        &kp K_VOLUME_DOWN  &kp K_VOLUME_UP   &kp K_MUTE  &trans  &bt BT_SEL 1  &bt BT_SEL 2
-&trans  &trans  &kp F9  &kp F10    &kp F11         &kp F12       &trans             &trans            &trans      &trans  &trans        &trans
-                        &left_tab  &change_screen  &right_tab    &trans             &trans            &trans
+&trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4     &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT  &trans  &bt BT_CLR    &bt BT_SEL 0
+&trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8     &kp K_VOLUME_DOWN  &kp K_VOLUME_UP   &kp K_MUTE  &trans  &bt BT_SEL 1  &bt BT_SEL 2
+&trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &trans             &trans            &trans      &trans  &trans        &trans
+                        &trans   &trans   &altf4     &trans             &trans            &trans
             >;
 
             label = "func";
@@ -308,10 +182,10 @@
 
         movement_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &ff_line_left    &ff_left    &ff_right    &ff_line_right    &kp END        &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT         &kp DOWN    &kp UP       &kp RIGHT         &none          &none
-&trans  &trans  &trans  &trans  &trans  &trans    &high_line_left  &high_left  &high_right  &high_line_right  &kp PAGE_DOWN  &kp PAGE_UP
-                        &trans  &trans  &trans    &kp DEL          &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &ff_left    &ff_right    &trans     &kp END        &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN    &kp UP       &kp RIGHT  &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &high_left  &high_right  &trans     &kp PAGE_DOWN  &kp PAGE_UP
+                        &trans  &trans  &trans    &kp DEL   &trans      &trans
             >;
 
             label = "move";
