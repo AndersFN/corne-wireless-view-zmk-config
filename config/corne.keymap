@@ -110,12 +110,20 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&kp LEFT_WIN &kp SPACE>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp LEFT_BRACKET>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp LEFT_GUI &kp SPACE>;
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
 
             label = "test";
         };
