@@ -106,58 +106,16 @@
             label = "ALTF4";
         };
 
-        oo: oo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(SPACE)>,
-                <&macro_tap>,
-                <&kp SEMICOLON>,
-                <&macro_tap>,
-                <&kp LG(SPACE)>;
-
-            label = "OO";
-        };
-
-        ae: ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(SPACE)>,
-                <&macro_tap>,
-                <&kp SQT>,
-                <&macro_tap>,
-                <&kp LG(SPACE)>;
-
-            label = "AE";
-        };
-
-        aa: aa {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LG(SPACE)>,
-                <&macro_tap>,
-                <&kp LEFT_BRACKET>,
-                <&macro_tap>,
-                <&kp LG(SPACE)>;
-
-            label = "AA";
-        };
-
         high_home: high_home {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp HOME &kp LEFT_SHIFT>,
+                <&kp LEFT_SHIFT>,
                 <&macro_tap>,
-                <&kp RIGHT>,
+                <&kp HOME>,
                 <&macro_release>,
-                <&kp HOME &kp LEFT_SHIFT>;
+                <&kp LEFT_SHIFT>;
 
             label = "HIGH_HOME";
         };
@@ -167,41 +125,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp END &kp LEFT_SHIFT>,
+                <&kp LEFT_SHIFT>,
                 <&macro_tap>,
-                <&kp RIGHT>,
+                <&kp END>,
                 <&macro_release>,
-                <&kp END &kp LEFT_SHIFT>;
+                <&kp LEFT_SHIFT>;
 
             label = "HIGH_END";
-        };
-
-        ff_end: ff_end {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp END>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp END>;
-
-            label = "FF_END";
-        };
-
-        ff_home: ff_home {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp HOME>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp HOME>;
-
-            label = "FF_HOME";
         };
     };
 
@@ -269,7 +199,7 @@
 
         movement_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &ff_home    &ff_left    &ff_right    &ff_end    &kp END        &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &ff_left    &ff_right    &kp END    &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN    &kp UP       &kp RIGHT  &kp DEL        &none
 &trans  &trans  &trans  &trans  &trans  &trans    &high_home  &high_left  &high_right  &high_end  &kp PAGE_DOWN  &kp PAGE_UP
                         &trans  &trans  &trans    &none       &trans      &trans
